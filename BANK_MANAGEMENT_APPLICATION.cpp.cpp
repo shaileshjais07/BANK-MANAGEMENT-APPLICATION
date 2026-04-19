@@ -108,7 +108,7 @@ void transaction(int accNo, int pin, int option) {
     file.close();
 }
 
-// Balance Inquiry (FIXED)
+// Balance Inquiry
 void checkBalance(int accNo, int pin) {
     BankAccount acc;
     ifstream inFile("bank.dat", ios::binary);
@@ -120,7 +120,7 @@ void checkBalance(int accNo, int pin) {
             cout << "\n===== ACCOUNT DETAILS =====\n";
             acc.showAccount();
             found = true;
-            break;   // 🔥 important fix
+            break;   
         }
     }
 
